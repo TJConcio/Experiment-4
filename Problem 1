@@ -1,0 +1,105 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std;
+
+	int add (int a, int b)
+	{
+		int s;
+		s=a+b;
+		return s;
+	}
+	int subtract (int a, int b)
+	{
+		int d;
+		d=a-b;
+		return d;
+	}
+	int multiply (int a, int b)
+	{
+		int p;
+		p=a*b;
+		return p;
+	}
+	int divide (int a, int b)
+	{
+		int q;
+		q=a/b;
+		return q;
+	}
+	int mod (int a, int b)
+	{
+		int r;
+		r=a%b;
+		return r;
+	}
+	
+int main()
+{
+	int a, b, op;
+	char cont = 'y';
+	
+	while (cont == 'y')
+	{
+		cout << "MENU" << "\n1. Add" << "\n2. Subtract" << "\n3. Multiply" << "\n4. Divide" << "\n5. Modulus\n";
+		cout << "\nChoose an operation: "; cin >> op;
+		cout << "Enter first number: "; cin >> a;
+		cout << "Enter second number: "; cin >> b;
+
+		switch (op)
+		{
+			case 1:
+			{
+			cout << "Result: " << add(a,b) << endl << endl; 
+			break;
+			}
+			
+			case 2:
+			{
+			cout << "Result: " << subtract(a,b) << endl << endl; 
+			break;
+			}
+	
+			case 3:
+			{
+			cout << "Result: " << multiply(a,b) << endl << endl; 
+			break;
+			}
+		
+			case 4:
+			{
+			cout << "Result: " << divide(a,b) << endl << endl; 
+			break;
+			}
+			
+			case 5:
+			{
+			cout << "Result: " << mod(a,b) << endl << endl; 
+			break;
+			}
+			default:
+			{
+			cout << "Enter valid operation (1 to 5)" << endl << endl;
+			break;
+			}
+		}
+		cout << "Continue?(type y if yes)";
+		cin >> cont;
+		cout << endl;
+	switch (cont)
+	{
+		case 'y':
+		{
+			continue;	
+		}
+		default:
+		{
+			break;
+		}
+	}
+	}
+	
+	_getch();
+	return 0;
+}
