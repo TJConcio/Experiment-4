@@ -40,7 +40,7 @@ int main()
 	int a, b, op;
 	char cont = 'y';
 	
-	while (cont == 'y')
+	while (cont == 'y' || cont == 'Y')
 	{
 		cout << "MENU" << "\n1. Add" << "\n2. Subtract" << "\n3. Multiply" << "\n4. Divide" << "\n5. Modulus\n";
 		cout << "\nChoose an operation: "; cin >> op;
@@ -87,17 +87,7 @@ int main()
 		cout << "Continue?(type y if yes)";
 		cin >> cont;
 		cout << endl;
-	switch (cont)
-	{
-		case 'y':
-		{
-			continue;	
-		}
-		default:
-		{
-			break;
-		}
-	}
+
 	}
 	
 	_getch();
